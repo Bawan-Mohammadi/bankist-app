@@ -1,3 +1,5 @@
+<img width="1440" height="788" alt="Screenshot 2026-05-03 at 2 43 36 PM" src="https://github.com/user-attachments/assets/3faa2712-aff9-4440-b565-df1471db45b9" />
+
 # 💳 Bankist App
 
 This is a simple, responsive banking application built with JavaScript.  
@@ -17,4 +19,4 @@ It simulates basic banking operations like logging in, transferring money, reque
 - JavaScript  
 
 🔒 Built as part of my JavaScript learning journey.
-<img width="1440" height="788" alt="Screenshot 2026-05-03 at 2 43 36 PM" src="https://github.com/user-attachments/assets/3faa2712-aff9-4440-b565-df1471db45b9" />
+
