@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="/___vscode_livepreview_injected_script"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankist App</title>
+    <link rel="stylesheet" type="text/css" href="bankist-app.css" />
+  </head>
+  <body>
+    <div class="head-grid">
+      <p class="login-message">Log in to get started</p>
+      <img class="img" src="logo.png" alt="logo" />
+
+      <form class="up-input">
+        <input type="text" placeholder="user" id="username" />
+        <input type="password" placeholder="PIN" id="pin" maxlength="4" />
+        <button class="up-input-button">
+          <p>→</p>
+        </button>
+      </form>
+    </div>
+    <div class="credentials-container">
+      <div class="credentials">
+        <p class="credentials-h">
+          In order to access the website, use the following credentials:
+        </p>
+        <div class="credentials-user-pass">
+          <p class="credentials-each">Username: js</p>
+          <p class="credentials-each">PIN: 1111</p>
+        </div>
+        <div class="credentials-user-pass">
+          <p class="credentials-each">Username: jd</p>
+          <p class="credentials-each">PIN: 2222</p>
+        </div >
+        <div class="credentials-user-pass">
+          <p class="credentials-each">Username: stw</p>
+          <p class="credentials-each">PIN: 3333</p>
+        </div>
+        <div class="credentials-user-pass">
+          <p class="credentials-each">Username: ss</p>
+          <p class="credentials-each">PIN: 4444</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container opacity">
+      <div class="grid-middle">
+        <div class="balance">
+          <div class="current-time">
+            <p class="current-balance">Current balance</p>
+            <p class="under-balance">
+              As of <span class="time-date">25/02/2026, 17:24</span>
+            </p>
+          </div>
+          <div><p class="balance-number">25 952,59 €</p></div>
+        </div>
+
+        <div class="grid-list">
+          <div class="sort-button-direction">
+            <button class="sort-button">SORT↓</button>
+          </div>
+        </div>
+
+        <form class="grid-transfer">
+          <div class="colored-inputs-center">
+            <div class="colored-grid">
+              <div class="colored-h">
+                <h4>Transfer money</h4>
+              </div>
+              <div class="flex-text-input">
+                <input
+                  type="text"
+                  class="colored-boxes-input"
+                  id="transfer-input"
+                />
+                <p class="under-input">Transfer to</p>
+              </div>
+              <div class="flex-text-input">
+                <input
+                  type="number"
+                  class="colored-boxes-input"
+                  id="transfer-amount"
+                />
+                <p class="under-input">Amount</p>
+              </div>
+              <div>
+                <button class="colored-boxes-button" id="transfer-button">
+                  <span>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form class="grid-request">
+          <div class="colored-inputs-center">
+            <div class="colored-grid">
+              <div class="colored-h">
+                <h4>Request loan</h4>
+              </div>
+              <div class="flex-text-input">
+                <input
+                  type="text"
+                  class="colored-boxes-input"
+                  id="loan-input"
+                />
+                <p class="under-input">Amount</p>
+              </div>
+              <div>
+                <button class="colored-boxes-button" id="loan-button">
+                  <span>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form class="grid-close">
+          <div class="colored-inputs-center">
+            <div class="colored-grid">
+              <div class="colored-h">
+                <h4>Close account</h4>
+              </div>
+              <div class="flex-text-input">
+                <input
+                  type="text"
+                  class="colored-boxes-input"
+                  id="close-input"
+                />
+                <p class="under-input">Confirm user</p>
+              </div>
+              <div class="flex-text-input">
+                <input
+                  type="password"
+                  class="colored-boxes-input"
+                  id="close-pin"
+                  maxlength="4"
+                />
+                <p class="under-input">Confirm PIN</p>
+              </div>
+              <div>
+                <button class="colored-boxes-button" id="close-button">
+                  <span>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="grid-bottom">
+          <p class="bottom-text">
+            IN <span class="in-interest" id="income">27,035,20 €</span>
+          </p>
+          <p class="bottom-text">OUT <span class="out">1082,61 €</span></p>
+          <p class="bottom-text">
+            INTEREST <span class="in-interest" id="interest"> 323,46 €</span>
+          </p>
+        </div>
+
+        <div class="grid-logout">
+          <p>You will be logged out in <span class="timer"></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="bankist-app.js"></script>
+  </body>
+</html>

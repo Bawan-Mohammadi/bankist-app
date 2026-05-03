@@ -1,0 +1,540 @@
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  max-width: 2000px;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  transition: all 1s;
+}
+.opacity {
+  opacity: 0;
+}
+
+.login-message {
+  font-weight: 500;
+  font-size: 20px;
+  color: #444444;
+  display: grid;
+  grid-area: login;
+}
+.img {
+  height: 52px;
+  width: 52px;
+  display: grid;
+  grid-area: logo;
+}
+
+.up-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.up-input input {
+  display: grid;
+  grid-area: up-input;
+  margin: 3px;
+  border: none;
+  border-radius: 30px;
+  width: 105px;
+  height: 35px;
+  text-align: center;
+  box-shadow: none;
+}
+.up-input-button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  display: grid;
+  grid-area: button;
+}
+.up-input-button:active {
+  color: #939393;
+}
+.up-input-button:hover {
+  color: #939393;
+}
+.head-grid {
+  display: grid;
+  grid-template-areas: "login logo up-input button";
+  grid-template-columns: 1fr 3fr 1fr;
+  place-items: center;
+  padding: 25px 30px;
+}
+.up-input input:focus {
+  outline-color: #cccccc;
+  outline-style: solid;
+  outline-width: 1px;
+}
+.up-input input::placeholder {
+  color: #cccccc;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.balance {
+  grid-area: balance;
+  display: flex;
+  justify-content: space-between;
+  color: #444444;
+  padding: 10px 0;
+}
+.balance-number {
+  font-size: 50px;
+}
+.current-balance {
+  font-size: 25px;
+  margin: 4px 0;
+}
+.under-balance {
+  color: #939393;
+  font-size: 15px;
+}
+.current-time {
+  display: flex;
+  flex-direction: column;
+}
+.grid-list {
+  grid-area: list;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  overflow: scroll;
+  grid-row: 2 / span 3;
+  display: flex;
+  flex-direction: column;
+}
+.sort-button-direction {
+  display: flex;
+  justify-content: flex-end;
+  order: -1;
+  padding: 15px 25px;
+}
+.grid-transfer {
+  display: grid;
+  grid-area: transfer;
+  background: linear-gradient(180deg, #f7c94a 0%, #f2b93b 100%);
+  padding: 35px 35px;
+  border: none;
+  border-radius: 10px;
+}
+.grid-request {
+  display: grid;
+  grid-area: request;
+  background: linear-gradient(180deg, #a9e6a0 0%, #6fcf8e 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 35px 50px;
+}
+.grid-close {
+  display: grid;
+  grid-area: close;
+  background: linear-gradient(180deg, #f26a6f 0%, #d94a5a 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 35px 50px;
+}
+.grid-bottom {
+  grid-area: bottom;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.grid-logout {
+  grid-area: logout;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.grid-middle {
+  display: grid;
+  grid-template-columns: 8fr 6fr;
+  grid-template-areas:
+    "balance balance"
+    "list transfer"
+    "list request"
+    "list close"
+    "bottom logout";
+  grid-template-rows: auto repeat(3, 10rem) auto;
+  gap: 20px;
+}
+
+.list-items {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.list-items:last-child {
+  border-bottom: none;
+}
+
+/* Put first two spans closer together */
+.list-items span:nth-child(1) {
+  margin-right: 12px;
+}
+/* Amount pushed right */
+.list-items span:nth-child(3) {
+  margin-left: auto; /* ✅ key line */
+}
+.list-deposit {
+  background: linear-gradient(180deg, #a9e6a0 0%, #6fcf8e 100%);
+  padding: 5px 8px;
+  border: none;
+  border-radius: 30px;
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+}
+.list-withdrawal {
+  background: linear-gradient(180deg, #f26a6f 0%, #d94a5a 100%);
+  padding: 5px 8px;
+  border: none;
+  border-radius: 30px;
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+}
+.colored-boxes-input {
+  outline: none;
+  grid-area: input;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  border-radius: 5px;
+  padding: 6px;
+  width: 120px;
+}
+.colored-boxes-input:focus {
+  background: rgba(255, 255, 255, 0.5);
+}
+.colored-boxes-button {
+  grid-area: button;
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 17px;
+  line-height: 1;
+  font-size: 18px;
+}
+.colored-boxes-button:active {
+  background: rgba(240, 240, 240, 0.3);
+}
+
+.sort-button:active {
+  color: #939393;
+}
+.sort-button:hover {
+  color: #939393;
+}
+.items-list-date {
+  color: #666666;
+  font-size: 11px;
+}
+.grid > * {
+  min-width: 0;
+  /* It tells CSS Grid:
+    “You are allowed to make my grid items narrower than their content.”
+Without this line, Grid items refuse to shrink, even when you change fr values. */
+}
+
+.colored-h {
+  display: grid;
+  grid-area: h;
+}
+.under-input {
+  display: flex;
+  grid-area: under;
+  justify-content: center;
+}
+
+.colored-grid {
+  display: grid;
+  grid-template-areas:
+    "h h h"
+    "input input button"
+    "under under .";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.flex-text-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.in-interest {
+  color: #6fcf8e;
+  font-size: 18px;
+  padding: 3px;
+}
+.out {
+  color: #d94a5a;
+  font-size: 18px;
+  padding: 3px;
+}
+.sort-button {
+  background: transparent;
+  border: none;
+  background: #e6e6e6;
+  padding: 8px;
+  border-radius: 15px;
+}
+.mobile-only {
+  display: none;
+}
+
+.laptop-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .grid-list {
+    grid-area: list;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    overflow: scroll;
+  }
+  .head-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .up-input {
+    margin-left: 27px;
+  }
+  .flex-middle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .grid-middle {
+    display: grid;
+    grid-template-areas:
+      "balance"
+      "bottom"
+      "transfer"
+      "request"
+      "close"
+      "list"
+      "logout";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-columns: minmax(300px, 500px);
+    justify-content: center; /* centers the grid horizontally */
+  }
+
+  .balance-number {
+    font-size: 30px;
+  }
+  .current-balance {
+    font-size: 20px;
+  }
+  .under-balance {
+    font-size: 12px;
+  }
+  .colored-grid {
+    gap: 10px;
+  }
+  .colored-boxes-input {
+    width: 100px;
+  }
+  .colored-boxes-button {
+    padding: 6px 12px;
+  }
+  .grid-logout {
+    justify-content: center;
+  }
+  .in-interest {
+    font-size: 14px;
+  }
+  .out {
+    font-size: 14px;
+  }
+  .bottom-text {
+    font-size: 12px;
+  }
+  .laptop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+
+  .colored-inputs-center {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/* tablets */
+@media (max-width: 1024px) {
+  .grid-middle {
+    padding: 0 25px;
+  }
+}
+.credentials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.credentials {
+  background-color: white;
+  width: 40%;
+  border: 1px #d9d9d9 solid;
+  border-radius: 8px;
+  padding: 32px;
+}
+.credentials-h{
+  font-size: 24px;
+  color: #1e1e1e;
+  line-height: 120%;
+  margin-bottom: 10px;
+}
+.credentials-user-pass{
+display: flex;
+gap: 8px;
+line-height: 100%;
+margin-bottom: 5px;
+}
+.credentials-each{
+  font-size: 16px;
+  background-color: #2c2c2c;
+  color: white;
+  padding: 8px 8px;
+border-radius: 8px;
+}
